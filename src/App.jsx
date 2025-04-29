@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { createContext } from 'react'
+import Navbar from './components/Navbar';
+import data from './data/details.json';
+
+export const themeContext = createContext();
 
 function App() {
+
   return (
-    <div>App</div>
+    <themeContext.Provider value={{ data }}>
+      <Navbar />
+    </themeContext.Provider>
   )
 }
 
